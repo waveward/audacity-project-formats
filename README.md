@@ -53,6 +53,10 @@ Audacity 4.0.1 lists *Export multiple* — each track, or each labelled region, 
 - Because blocks are immutable, the audio usually survives: blocks written successfully stay valid even when later writes failed. Recovery is a matter of finding a document that still decodes (`project`, then `autosave`, then — in an .aup4 — the `project_history` generations), listing which referenced blocks can still be read, and rebuilding a project from those. Blocks that were never written are silence; nothing recovers them.
 - Audacity's own recovery utility, [audacity-project-tools](https://github.com/audacity/audacity-project-tools), is a terminal program. Points that matter in 2026: it has had a [macOS build since v1.0.5](https://github.com/audacity/audacity-project-tools/releases/tag/v1.0.5) (2026-01-27); its `MaxSupportedVersion` is 3.7.0.0, so an .aup4 is treated as a project with a broken `user_version`, clamped to 3.7, and any recovered copy is written as a 3.7.0 project ([AudacityDatabase.cpp](https://github.com/audacity/audacity-project-tools/blob/main/src/AudacityDatabase.cpp)); it reads `project` and `autosave` only, not `project_history`; and the [official support page](https://support.audacityteam.org/au3/troubleshooting/recovering-corrupted-projects) asks for about four times the project's size in free disk space (and, as of this writing, still says macOS is unsupported).
 
+## Hands-on
+
+- [Looking inside an .aup3 or .aup4 with the sqlite3 command line](inspect-with-sqlite3.md) — opening one read-only (and why `sqlite3 -readonly` fails), decoding the version stamps, counting sample blocks, and pulling one block out as a WAV; measured on two public projects.
+
 ## Sources
 
 - [ProjectFileIO.cpp, Audacity 3.7.9](https://github.com/audacity/audacity/blob/Audacity-3.7.9/libraries/lib-project-file-io/ProjectFileIO.cpp) — the `AUDY` application id, the packed `user_version`, `AUDACITY_FILE_FORMAT_VERSION` 1.3.0, and both refusal messages.
