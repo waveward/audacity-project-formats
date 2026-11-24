@@ -83,6 +83,7 @@ Longer write-ups of the above, kept current, on the Waveward site:
 - [Why Audacity 3 won't open an .aup4, and the way back](https://aup4.aivismonitor.com/aup4-to-aup3) — the two gates and what a downgrade rewrites.
 - [Recovering a corrupted Audacity project](https://aup4.aivismonitor.com/recover-audacity-project) — error codes 11 and 101, the `-wal` file, and rebuilding from the blocks that survive.
 - Getting the audio out of a project without Audacity: [.aup4 to MP3](https://aup4.aivismonitor.com/aup4-to-mp3) · [.aup4 to WAV](https://aup4.aivismonitor.com/aup4-to-wav) · [.aup3 to MP3](https://aup4.aivismonitor.com/aup3-to-mp3) · [.aup3 to WAV](https://aup4.aivismonitor.com/aup3-to-wav) · [open an .aup4 or .aup3 in the browser](https://aup4.aivismonitor.com/).
+- Waveward also has its own domain, [waveward.app](https://waveward.app/), with the same pages: [.aup4 to MP3](https://waveward.app/aup4-to-mp3) · [.aup3 to MP3](https://waveward.app/aup3-to-mp3) · [old .aup to MP3](https://waveward.app/aup-to-mp3) · [recovering a corrupted project](https://waveward.app/recover-audacity-project) · [.aup4 back to .aup3](https://waveward.app/aup4-to-aup3) · [what is an .aup4 file](https://waveward.app/what-is-aup4-file).
 
 ---
 
