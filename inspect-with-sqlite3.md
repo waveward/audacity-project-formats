@@ -5,7 +5,7 @@ description: Open an Audacity project read-only with sqlite3, decode its version
 
 # Looking inside an .aup3 or .aup4 with the sqlite3 command line
 
-An Audacity project is an SQLite database (see the [main notes](./)), so the stock `sqlite3` shell can read one without Audacity. These are the commands, and the output they gave, on two public projects: `clips4.aup4` from Audacity's own test data and `power-plug.aup3` from the tau-OS hydrogen-sound-theme repository. Run on 12 October 2026 with sqlite3 3.54.0 and FFmpeg 7.1.1 on macOS. I build [Waveward](https://aup4.aivismonitor.com), a browser tool that reads these files; that is where the sample rate and durations quoted below were read.
+An Audacity project is an SQLite database (see the [main notes](./)), so the stock `sqlite3` shell can read one without Audacity. These are the commands, and the output they gave, on two public projects: `clips4.aup4` from Audacity's own test data and `power-plug.aup3` from the tau-OS hydrogen-sound-theme repository. Run on 12 October 2026 with sqlite3 3.54.0 and FFmpeg 7.1.1 on macOS. I build [Waveward](https://waveward.app), a browser tool that reads these files; that is where the sample rate and durations quoted below were read.
 
 **Work on a copy.** Nothing here writes to the project, but a copy costs nothing.
 
@@ -91,7 +91,7 @@ One thing this shows: **trimming hides audio, it does not remove it.** `power-pl
 
 ## What this does not give you
 
-One block is one channel's slice of one clip. The mix — clips placed at their offsets, trims, envelopes, gain and pan, silence encoded as non-positive block ids — needs the document decoded, and that is a binary token stream, not XML (see the main notes). That is the part [Waveward](https://aup4.aivismonitor.com) does in the browser: [.aup4 to WAV](https://aup4.aivismonitor.com/aup4-to-wav), [.aup3 to WAV](https://aup4.aivismonitor.com/aup3-to-wav), and, for a project that will not open, [recovery](https://aup4.aivismonitor.com/recover-audacity-project).
+One block is one channel's slice of one clip. The mix — clips placed at their offsets, trims, envelopes, gain and pan, silence encoded as non-positive block ids — needs the document decoded, and that is a binary token stream, not XML (see the main notes). That is the part [Waveward](https://waveward.app) does in the browser: [.aup4 to WAV](https://waveward.app/aup4-to-wav), [.aup3 to WAV](https://waveward.app/aup3-to-wav), and, for a project that will not open, [recovery](https://waveward.app/recover-audacity-project).
 
 ## Sources
 
